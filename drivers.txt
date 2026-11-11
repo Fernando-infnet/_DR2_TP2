@@ -1,0 +1,72 @@
+Exercício 9 - Drivers registrados
+
+$ cat /proc/devices
+
+Character devices:
+  1 mem
+  4 /dev/vc/0
+  4 tty
+  4 ttyS
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+  7 vcs
+ 10 misc
+ 13 input
+ 21 sg
+ 29 fb
+ 81 video4linux
+ 89 i2c
+116 alsa
+128 ptm
+136 pts
+180 usb
+188 ttyUSB
+189 usb_device
+202 cpu/msr
+203 cpu/cpuid
+216 rfcomm
+226 drm
+238 media
+239 kfd
+240 aux
+241 cec
+242 rust_binder
+243 hidraw
+244 ttyDBC
+245 bsg
+246 watchdog
+247 remoteproc
+248 lirc
+249 rtc
+250 dma_heap
+251 dax
+252 tpm
+253 pwm
+254 gpiochip
+261 accel
+
+Block devices:
+  8 sd
+ 65 sd
+ 66 sd
+ 67 sd
+ 68 sd
+ 69 sd
+ 70 sd
+ 71 sd
+128 sd
+129 sd
+130 sd
+131 sd
+132 sd
+133 sd
+134 sd
+135 sd
+253 zram
+254 virtblk
+259 blkext
+
+Exemplos que encontrei:
+- Driver de caractere: tty, major 4
+- Driver de bloco: sd, major 8

@@ -1,0 +1,20 @@
+Exercício 6 - Sysfs
+
+$ ls -1 /sys/block
+sda
+sdb
+sdc
+zram0
+
+Escolhi o sda. Estes foram os atributos que consultei:
+
+$ cat /sys/block/sda/device/vendor
+ATA
+$ cat /sys/block/sda/device/model
+ST2000DM008-2EP1
+$ cat /sys/block/sda/size
+3907029168
+$ cat /sys/block/sda/queue/rotational
+1
+
+O size é informado em setores de 512 bytes. O valor 1 em rotational mostra que é um HD mecânico.

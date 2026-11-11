@@ -1,0 +1,6 @@
+$ lsblk -o NAME,KNAME,TYPE,SIZE,FSTYPE,MOUNTPOINTS | sed -n '1p;/sda/p'
+
+NAME   KNAME TYPE   SIZE FSTYPE MOUNTPOINTS
+sda    sda   disk   1.8T
+├─sda5 sda5  part   298M vfat   /boot/efi
+└─sda6 sda6  part   1.6T ext4   /

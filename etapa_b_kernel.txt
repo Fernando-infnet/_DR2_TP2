@@ -1,0 +1,6 @@
+$ cat /proc/partitions | grep -E 'name|sda'
+
+major minor  #blocks  name
+   8        0 1953514584 sda
+   8        5     305152 sda5
+   8        6 1717558272 sda6

@@ -1,0 +1,9 @@
+Exercício 5 - Aspas simples e duplas
+
+$ echo 'Meu usuário é $nome'
+Meu usuário é $nome
+
+$ echo "Meu usuário é $nome"
+Meu usuário é intra
+
+Com aspas simples, $nome ficou como texto. Com aspas duplas, o shell trocou a variável pelo valor.

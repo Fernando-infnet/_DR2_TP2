@@ -1,0 +1,15 @@
+Exercício 10 - Discos e partições
+
+$ lsblk -o NAME,KNAME,TYPE,SIZE,FSTYPE,MOUNTPOINTS,MODEL,VENDOR
+
+NAME   KNAME TYPE   SIZE FSTYPE MOUNTPOINTS MODEL              VENDOR
+sda    sda   disk   1.8T                    ST2000DM008-2EP102 ATA
+├─sda5 sda5  part   298M vfat   /boot/efi
+└─sda6 sda6  part   1.6T ext4   /
+sdb    sdb   disk 931.5G                    ST1000DM010-2EP102 ATA
+├─sdb1 sdb1  part    16M
+├─sdb2 sdb2  part   154G ext4
+└─sdb4 sdb4  part   743M ntfs
+sdc    sdc   disk 238.5G                    RM-SSD-256GB       ATA
+└─sdc1 sdc1  part 238.5G ext4
+zram0  zram0 disk     4G swap   [SWAP]

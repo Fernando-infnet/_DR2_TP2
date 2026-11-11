@@ -1,0 +1,18 @@
+Exercício 1 - Shell expansions
+
+$ touch arquivos_ex1/aula_{01..03}.log arquivos_ex1/notas.txt
+$ ls -1 arquivos_ex1/*.log
+arquivos_ex1/aula_01.log
+arquivos_ex1/aula_02.log
+arquivos_ex1/aula_03.log
+
+$ touch arquivos_ex1/relatorio_{A..C}_{1..2}.txt
+$ ls -1 arquivos_ex1/relatorio_{A..C}_{1..2}.txt
+arquivos_ex1/relatorio_A_1.txt
+arquivos_ex1/relatorio_A_2.txt
+arquivos_ex1/relatorio_B_1.txt
+arquivos_ex1/relatorio_B_2.txt
+arquivos_ex1/relatorio_C_1.txt
+arquivos_ex1/relatorio_C_2.txt
+
+As chaves criaram vários nomes de uma vez e o *.log mostrou só os arquivos de log.

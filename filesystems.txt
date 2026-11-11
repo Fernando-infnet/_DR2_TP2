@@ -1,0 +1,45 @@
+Exercício 11 - Filesystems montados
+
+$ mount
+
+/dev/sda6 on / type ext4 (rw,relatime)
+devtmpfs on /dev type devtmpfs (rw,nosuid,size=15873740k,nr_inodes=3968435,mode=755,inode64)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64,usrquota)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=600,ptmxmode=000)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot,memory_hugetlb_accounting)
+none on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,size=6376012k,nr_inodes=819200,mode=755,inode64)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=41,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=7166)
+none on /run/credentials/systemd-journald.service type tmpfs (ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,pagesize=2M)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /tmp type tmpfs (rw,nosuid,nodev,nr_inodes=1048576,inode64,usrquota)
+/dev/sda5 on /boot/efi type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=3188004k,nr_inodes=797001,mode=700,uid=1000,gid=1000,inode64)
+gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+portal on /run/user/1000/doc type fuse.portal (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+overlay on /var/lib/docker/overlay2/334044deeeb75107bff2c3f19908807448675afef6a4e4cf28c2fddef185bfc1/merged type overlay (rw,relatime,lowerdir=/var/lib/docker/overlay2/l/BVRDK7NQJRURLRXXAHGT25KGLA:/var/lib/docker/overlay2/l/FRL43JSIUQVFMH6TM5CZGXWTVZ:/var/lib/docker/overlay2/l/VUWZ73WIIOJDPLO753QXF2VACC:/var/lib/docker/overlay2/l/AWEPTRV5U7L34NFIND74AY56AA:/var/lib/docker/overlay2/l/O6P3BU6WZ63NIUAMBGMIN67OVO:/var/lib/docker/overlay2/l/T7YVIO3KH6VQWJKIRWSHZA7BGW:/var/lib/docker/overlay2/l/6SUNNCGJQVBFZD2P57Q5UCEFPJ:/var/lib/docker/overlay2/l/DIB6FVSGWWH77BZJBM6YPVL33Z:/var/lib/docker/overlay2/l/QR3EM2NRZAB52DQLGY3TRCRCSD:/var/lib/docker/overlay2/l/7YA6SXRDTJ3DR45AGUM3BWEUTF:/var/lib/docker/overlay2/l/UIQXUM3DZJ7Z3UUAPQTDWKTTGZ:/var/lib/docker/overlay2/l/AWMQ2QFEAT4Y4Y5K7XKECXKXN7,upperdir=/var/lib/docker/overlay2/334044deeeb75107bff2c3f19908807448675afef6a4e4cf28c2fddef185bfc1/diff,workdir=/var/lib/docker/overlay2/334044deeeb75107bff2c3f19908807448675afef6a4e4cf28c2fddef185bfc1/work,index=off)
+nsfs on /run/docker/netns/21a119077b21 type nsfs (rw)
+
+$ df -hT
+
+Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/sda6      ext4      1.6T  1.1T  447G  71% /
+devtmpfs       devtmpfs   16G     0   16G   0% /dev
+tmpfs          tmpfs      16G  123M   16G   1% /dev/shm
+efivarfs       efivarfs  128K   64K   60K  52% /sys/firmware/efi/efivars
+tmpfs          tmpfs     6.1G  2.8M  6.1G   1% /run
+none           tmpfs     1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs          tmpfs      16G  152M   16G   1% /tmp
+/dev/sda5      vfat      298M   16M  283M   6% /boot/efi
+tmpfs          tmpfs     3.1G  120K  3.1G   1% /run/user/1000

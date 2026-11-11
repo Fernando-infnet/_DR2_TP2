@@ -1,0 +1,90 @@
+Exercício 8 - Mensagens do kernel sobre armazenamento
+
+$ journalctl -k --no-pager | grep -Ei 'sda|sdb|sdc|ata[0-9]|scsi|storage|disk'
+
+Nov 11 13:12:23 archlinux kernel: RAMDISK: [mem 0x71a37000-0x748acfff]
+Nov 11 13:12:23 archlinux kernel: SCSI subsystem initialized
+Nov 11 13:12:23 archlinux kernel: VFS: Disk quotas dquot_6.6.0
+Nov 11 13:12:23 archlinux kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+Nov 11 13:12:23 archlinux kernel: scsi host0: ahci
+Nov 11 13:12:23 archlinux kernel: scsi host1: ahci
+Nov 11 13:12:23 archlinux kernel: scsi host2: ahci
+Nov 11 13:12:23 archlinux kernel: scsi host3: ahci
+Nov 11 13:12:23 archlinux kernel: ata1: SATA max UDMA/133 abar m8192@0xdcf80000 port 0xdcf80100 irq 48 lpm-pol 3
+Nov 11 13:12:23 archlinux kernel: ata2: SATA max UDMA/133 abar m8192@0xdcf80000 port 0xdcf80180 irq 48 lpm-pol 3
+Nov 11 13:12:23 archlinux kernel: ata3: SATA max UDMA/133 abar m8192@0xdcf80000 port 0xdcf80200 irq 48 lpm-pol 3
+Nov 11 13:12:23 archlinux kernel: ata4: SATA max UDMA/133 abar m8192@0xdcf80000 port 0xdcf80280 irq 48 lpm-pol 3
+Nov 11 13:12:23 archlinux kernel: scsi host4: ahci
+Nov 11 13:12:23 archlinux kernel: scsi host5: ahci
+Nov 11 13:12:23 archlinux kernel: scsi host6: ahci
+Nov 11 13:12:23 archlinux kernel: scsi host7: ahci
+Nov 11 13:12:23 archlinux kernel: scsi host8: ahci
+Nov 11 13:12:23 archlinux kernel: scsi host9: ahci
+Nov 11 13:12:23 archlinux kernel: ata5: SATA max UDMA/133 abar m1024@0xdcd80000 port 0xdcd80100 irq 49 lpm-pol 3
+Nov 11 13:12:23 archlinux kernel: ata6: SATA max UDMA/133 abar m1024@0xdcd80000 port 0xdcd80180 irq 49 lpm-pol 3
+Nov 11 13:12:23 archlinux kernel: ata7: SATA max UDMA/133 abar m1024@0xdcd80000 port 0xdcd80200 irq 49 lpm-pol 3
+Nov 11 13:12:23 archlinux kernel: ata8: SATA max UDMA/133 abar m1024@0xdcd80000 port 0xdcd80280 irq 49 lpm-pol 3
+Nov 11 13:12:23 archlinux kernel: ata9: DUMMY
+Nov 11 13:12:23 archlinux kernel: ata10: DUMMY
+Nov 11 13:12:23 archlinux kernel: ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+Nov 11 13:12:23 archlinux kernel: ata1.00: ATA-8: ST2000DM008-2EP102, ZZZZ, max UDMA/133
+Nov 11 13:12:23 archlinux kernel: ata1.00: 3907029168 sectors, multi 0: LBA48 NCQ (depth 32), AA
+Nov 11 13:12:23 archlinux kernel: ata1.00: Features: DIPM
+Nov 11 13:12:23 archlinux kernel: ata1.00: configured for UDMA/133
+Nov 11 13:12:23 archlinux kernel: ata5: SATA link down (SStatus 0 SControl 330)
+Nov 11 13:12:23 archlinux kernel: scsi 0:0:0:0: Direct-Access     ATA      ST2000DM008-2EP1 ZZZZ PQ: 0 ANSI: 5
+Nov 11 13:12:23 archlinux kernel: sd 0:0:0:0: [sda] 3907029168 512-byte logical blocks: (2.00 TB/1.82 TiB)
+Nov 11 13:12:23 archlinux kernel: sd 0:0:0:0: [sda] 4096-byte physical blocks
+Nov 11 13:12:23 archlinux kernel: sd 0:0:0:0: [sda] Write Protect is off
+Nov 11 13:12:23 archlinux kernel: sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Nov 11 13:12:23 archlinux kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Nov 11 13:12:23 archlinux kernel: sd 0:0:0:0: [sda] Preferred minimum I/O size 4096 bytes
+Nov 11 13:12:23 archlinux kernel:  sda: sda5 sda6
+Nov 11 13:12:23 archlinux kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+Nov 11 13:12:23 archlinux kernel: ata2: SATA link down (SStatus 0 SControl 300)
+Nov 11 13:12:23 archlinux kernel: ata3: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+Nov 11 13:12:23 archlinux kernel: ata3.00: Model 'ST1000DM010-2EP102', rev 'CC43', applying quirks: nolpm
+Nov 11 13:12:23 archlinux kernel: ata3.00: ATA-8: ST1000DM010-2EP102, CC43, max UDMA/133
+Nov 11 13:12:23 archlinux kernel: ata3.00: 1953525168 sectors, multi 0: LBA48 NCQ (depth 32), AA
+Nov 11 13:12:23 archlinux kernel: ata3.00: LPM support broken, forcing max_power
+Nov 11 13:12:23 archlinux kernel: ata3.00: Features: DIPM
+Nov 11 13:12:23 archlinux kernel: ata3.00: configured for UDMA/133
+Nov 11 13:12:23 archlinux kernel: scsi 2:0:0:0: Direct-Access     ATA      ST1000DM010-2EP1 CC43 PQ: 0 ANSI: 5
+Nov 11 13:12:23 archlinux kernel: sd 2:0:0:0: [sdb] 1953525168 512-byte logical blocks: (1.00 TB/932 GiB)
+Nov 11 13:12:23 archlinux kernel: sd 2:0:0:0: [sdb] 4096-byte physical blocks
+Nov 11 13:12:23 archlinux kernel: sd 2:0:0:0: [sdb] Write Protect is off
+Nov 11 13:12:23 archlinux kernel: sd 2:0:0:0: [sdb] Mode Sense: 00 3a 00 00
+Nov 11 13:12:23 archlinux kernel: sd 2:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Nov 11 13:12:23 archlinux kernel: sd 2:0:0:0: [sdb] Preferred minimum I/O size 4096 bytes
+Nov 11 13:12:23 archlinux kernel:  sdb: sdb1 sdb2 sdb4
+Nov 11 13:12:23 archlinux kernel: sd 2:0:0:0: [sdb] Attached SCSI disk
+Nov 11 13:12:23 archlinux kernel: ata4: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+Nov 11 13:12:23 archlinux kernel: ata4.00: ATA-11: RM-SSD-256GB, HT5310B3, max UDMA/133
+Nov 11 13:12:23 archlinux kernel: ata4.00: 500118192 sectors, multi 1: LBA48 NCQ (depth 32), AA
+Nov 11 13:12:23 archlinux kernel: ata4.00: configured for UDMA/133
+Nov 11 13:12:23 archlinux kernel: scsi 3:0:0:0: Direct-Access     ATA      RM-SSD-256GB     10B3 PQ: 0 ANSI: 5
+Nov 11 13:12:23 archlinux kernel: sd 3:0:0:0: [sdc] 500118192 512-byte logical blocks: (256 GB/238 GiB)
+Nov 11 13:12:23 archlinux kernel: sd 3:0:0:0: [sdc] Write Protect is off
+Nov 11 13:12:23 archlinux kernel: sd 3:0:0:0: [sdc] Mode Sense: 00 3a 00 00
+Nov 11 13:12:23 archlinux kernel: sd 3:0:0:0: [sdc] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Nov 11 13:12:23 archlinux kernel: sd 3:0:0:0: [sdc] Preferred minimum I/O size 512 bytes
+Nov 11 13:12:23 archlinux kernel:  sdc: sdc1
+Nov 11 13:12:23 archlinux kernel: sd 3:0:0:0: [sdc] Attached SCSI disk
+Nov 11 13:12:23 archlinux kernel: ata6: SATA link down (SStatus 0 SControl 330)
+Nov 11 13:12:23 archlinux kernel: ata7: SATA link down (SStatus 0 SControl 330)
+Nov 11 13:12:23 archlinux kernel: ata8: SATA link down (SStatus 0 SControl 330)
+Nov 11 13:12:23 archlinux systemd[1]: systemd 262-1-arch running in system mode (+PAM +AUDIT -SELINUX +APPARMOR -IMA +IPE +SMACK +SECCOMP +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF +XKBCOMMON +UTMP +LIBARCHIVE)
+Nov 11 13:12:23 archlinux systemd[1]: Expecting device /dev/disk/by-uuid/a59aeee6-c9d2-4595-ac83-5031ef504548...
+Nov 11 13:13:11 archlinux kernel: EXT4-fs (sda6): mounted filesystem a59aeee6-c9d2-4595-ac83-5031ef504548 r/w with ordered data mode. Quota mode: none.
+Nov 11 13:13:23 archlinux systemd[1]: systemd 262-1-arch running in system mode (+PAM +AUDIT -SELINUX +APPARMOR -IMA +IPE +SMACK +SECCOMP +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF +XKBCOMMON +UTMP +LIBARCHIVE)
+Nov 11 13:13:23 archlinux systemd[1]: Expecting device /dev/disk/by-uuid/6640-1A26...
+Nov 11 13:13:23 archlinux systemd[1]: Listening on Disk Encryption Enrollment Service Socket.
+Nov 11 13:13:23 archlinux systemd[1]: Listening on Disk Repartitioning Service Socket.
+Nov 11 13:13:23 archlinux systemd[1]: Listening on Simple Block Device Backed Storage Provider.
+Nov 11 13:13:23 archlinux systemd[1]: Listening on Simple File System Backed Storage Provider.
+Nov 11 13:13:23 archlinux systemd[1]: Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+Nov 11 13:13:23 archlinux kernel: EXT4-fs (sda6): re-mounted a59aeee6-c9d2-4595-ac83-5031ef504548.
+Nov 11 13:13:23 archlinux kernel: EXT4-fs (sda6): re-mounted a59aeee6-c9d2-4595-ac83-5031ef504548.
+Nov 11 13:13:28 archlinux kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+Nov 11 13:13:28 archlinux kernel: sd 2:0:0:0: Attached scsi generic sg1 type 0
+Nov 11 13:13:28 archlinux kernel: sd 3:0:0:0: Attached scsi generic sg2 type 0

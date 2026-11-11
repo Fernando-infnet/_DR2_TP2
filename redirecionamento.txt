@@ -1,0 +1,9 @@
+Exercício 4 - Redirecionamento para /dev/null
+
+$ echo "Esta mensagem vai ser descartada" > /dev/null
+Não apareceu nada na tela.
+
+$ echo "Agora a mensagem aparece"
+Agora a mensagem aparece
+
+O /dev/null funciona como um descarte: ele recebe a saída, mas não guarda nem mostra o texto.

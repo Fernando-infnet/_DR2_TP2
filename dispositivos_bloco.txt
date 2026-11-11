@@ -1,0 +1,10 @@
+brw-rw----   1 root  disk        8,     0 Nov 11 13:13 sda
+brw-rw----   1 root  disk        8,     5 Nov 11 13:13 sda5
+brw-rw----   1 root  disk        8,     6 Nov 11 13:13 sda6
+brw-rw----   1 root  disk        8,    16 Nov 11 13:13 sdb
+brw-rw----   1 root  disk        8,    17 Nov 11 13:13 sdb1
+brw-rw----   1 root  disk        8,    18 Nov 11 13:13 sdb2
+brw-rw----   1 root  disk        8,    20 Nov 11 13:13 sdb4
+brw-rw----   1 root  disk        8,    32 Nov 11 13:13 sdc
+brw-rw----   1 root  disk        8,    33 Nov 11 13:13 sdc1
+brw-rw----   1 root  disk      253,     0 Nov 11 13:13 zram0
